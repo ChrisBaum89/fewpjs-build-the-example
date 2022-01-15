@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < likeButtons.length; i++){
     likeButtons[i].addEventListener("click", () => {
       likeButton = likeButtons[i]
+
+      //call server and perform like/unlike if response received
+      //unhide error message if response not received
       mimicServerCall()
         .then(function(serverResponded){
           errorBanner.classList.toggle('hidden', true)
